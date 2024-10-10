@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <form asp-action="SubmitForm" method="post">
+        @Html.AntiForgeryToken() <!-- Generates the anti-forgery token -->
+        <input type="text" name="someInput" />
+        <button type="submit">Submit</button>
+    </form>
+</div>
